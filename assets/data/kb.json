@@ -1,0 +1,37 @@
+{
+ "knowledge": [
+  {
+   "type": "affordance_constraints",
+   "object_class": "Open-topped vessel with a protruding side handle (mug)",
+   "strategies": [
+    "RIM STRADDLE AWAY FROM HANDLE: RIM STRADDLE on the rim section diametrically or laterally away from the handle, so the handle never enters the finger gap.",
+    "RIM STRADDLE BESIDE HANDLE: RIM STRADDLE on a rim section adjacent to the handle root, with the handle loop just outside one finger.",
+    "HANDLE PINCH: close across the handle loop itself."
+   ],
+   "knowledge": "Grasp mugs by the rim, not the handle. Prefer RIM STRADDLE AWAY FROM HANDLE; the loop visible immediately next to a finger in the wrist view, without collision. Select between them by the handle's bearing relative to the approach: if the rim section that faces the robot/carry direction contains the handle root, move the straddle point along the rim until the handle is outside the finger gap. HANDLE PINCH is untested for this class -- do not assume it; if tried, watch whether the mug swings about the handle when lifted. Carry the mug upright; it hangs level from the rim",
+   "open_quantities": [
+    "handle bearing around the rim",
+    "rim radius"
+   ]
+  },
+  {
+   "type": "spatial_relationships",
+   "object_class": "Slab into a narrow open-topped compartment",
+   "strategies": [
+    "IN-PLANE VERTICAL SLOT INSERTION: yaw the held slab so its plane matches the slot's long direction, position directly over the slot, and lower straight down."
+   ],
+   "knowledge": "Use IN-PLANE VERTICAL SLOT INSERTION with the TOP-EDGE COVER PINCH kept throughout. Align yaw during the carry, before reaching the caddy, not at the slot. Map the compartment name to geometry from the caddy layout, not from image position alone: 'front'/'back' referred to the middle column's front and back slots; 'right' was the tall back-right slot; 'left' the long left slot. The slab ends standing with its upper part above the walls, hand still on the top edge; release is not shown.",
+   "open_quantities": [
+    "slot width and long axis",
+    "insertion depth"
+   ]
+  },
+  {
+   "type": "effects_dependencies",
+   "object_class": "Articulated state and its visual indicators",
+   "strategies": [],
+   "knowledge": "Read states from these cues: drawer OPEN = its slatted/dark interior box protrudes from the cabinet outline; CLOSED = front flush, interior invisible. Door OPEN = windowed panel standing out from the body; CLOSED = panel flush against the body. Stove ON = burner coil red; OFF = grey/dark. States persist without contact: a partly pulled drawer stays where left between strokes, a partly opened door stays at its angle when the hand repositions, a burner stays red after the hand leaves the knob. So a later stage may assume the articulation remains where last observed if nothing touched it. Closing a drawer with an item inside did not visibly disturb the item, but it becomes unobservable.",
+   "open_quantities": []
+  }
+ ]
+}

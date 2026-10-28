@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RoboAuto</title>
+<meta name="description" content="RoboAuto: autonomous robot program search through multi-level physical understanding.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css?v=20261026q">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%232f6fd0' stroke-width='5'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%231f7f74'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top"><span class="brand-mark"></span><span>Robo<span class="auto">Auto</span></span></a>
+  <nav class="nav-links" aria-label="Sections">
+    <a href="#overview">Overview</a>
+    <a href="#real">Real robot</a>
+    <a href="#method">Method</a>
+    <a href="#results">Results</a>
+    <a href="#more">More tasks</a>
+    <a href="#bibtex">BibTeX</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn btn-ghost" href="#" data-arxiv>arXiv ↗</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-mosaic" id="mosaic" aria-hidden="true"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <div class="wordmark">Robo<span class="auto">Auto</span></div>
+    <h1>Autonomous robot program search through multi&#8209;level physical understanding</h1>
+    <p class="lede">Execution feedback reveals whether a robot program succeeded, but rarely why it failed. RoboAuto guides program search with multi-level physical understanding: a hierarchical knowledge base, grounded in each scene, verified stage by stage, and refined through self-designed experiments.</p>
+    <p class="authors">Buzhao Liu<sup>*</sup>, Jianing Ye<sup>*</sup>, Xiu Yuan<sup>*</sup>, Yangtong Feng, Chengsong Huang, Tyler Dinh, Yevgeniy Vorobeychik, Ning Zhang, Chongjie Zhang<br>
+      <span class="affil">Washington University in St. Louis</span></p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#" data-arxiv>arXiv</a>
+      <span class="btn btn-outline is-disabled" aria-disabled="true" title="Coming soon">Code coming soon</span>
+      <a class="btn btn-outline" href="#bibtex">BibTeX</a>
+    </div>
+    <dl class="hero-stats">
+      <div><dt>LIBERO-PRO tasks</dt><dd>89.1<span>%</span></dd><small>ASPIRE 71.7%</small></div>
+      <div><dt>LIBERO-PRO Long tasks</dt><dd>73.4<span>%</span></dd><small>ASPIRE 30.8%</small></div>
+      <div><dt>LIBERO-Plus tasks</dt><dd>90.3<span>%</span></dd><small>ASPIRE 44.7%</small></div>
+      <div><dt>Robosuite tasks</dt><dd>90.6<span>%</span></dd><small>ASPIRE 81.0%</small></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Overview</h2>
+      <p class="sub">RoboAuto searches for robot programs with physical understanding that it retains, grounds in each scene, and refines through experiments.</p>
+    </div>
+    <div class="fig2" id="fig2-anim" aria-live="off"></div>
+    <ol class="pillars">
+      <li><b>Hierarchical knowledge base.</b> Object-centric physical knowledge from demonstration videos, plus executable skills accumulated through online task solving.</li>
+      <li><b>Physical scene grounding.</b> Measures the quantities each entry needs in the current scene, moving the arm to a more informative view when the first one is not enough.</li>
+      <li><b>Search and exploration.</b> Plans in verified stages and, when physical understanding is uncertain, explores actively through self-designed experiments.</li>
+    </ol>
+
+  </div>
+</section>
+
+<section class="section section-alt" id="real">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Real-robot tasks</h2>
+      <p class="sub">Three long-horizon precision tasks on a WidowX AI arm. Each trial is graded by task-completion level rather than binary success, earning partial credit for every stage it completes; scores are the mean over 20 trials per task.</p>
+    </div>
+    <div class="real-list" id="real-list"></div>
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Method</h2>
+    </div>
+    <div class="method-tabs" role="tablist">
+      <button class="mtab active" role="tab" data-panel="m-kb"><span class="mt-k">(a)</span><span class="mt-t">Hierarchical Knowledge Base</span><span class="mt-d">Object-centric physical knowledge and executable skills</span><span class="mt-go" aria-hidden="true">&rarr;</span></button>
+      <button class="mtab" role="tab" data-panel="m-ground"><span class="mt-k">(b)</span><span class="mt-t">Physical Scene Grounding</span><span class="mt-d">Action-critical quantities and active viewpoint selection</span><span class="mt-go" aria-hidden="true">&rarr;</span></button>
+      <button class="mtab" role="tab" data-panel="m-search"><span class="mt-k">(c)</span><span class="mt-t">Search and Exploration</span><span class="mt-d">Multi-stage planning with grounded verification and self-designed experiments</span><span class="mt-go" aria-hidden="true">&rarr;</span></button>
+    </div>
+
+    <div class="method-panel active" id="m-kb">
+      <div class="panel-text">
+        <h3>Two kinds of experience, kept apart on purpose</h3>
+        <p>The high-level layer holds <b>object-centric physical knowledge</b>: affordances, spatial relations, and action effects, each with the quantities that must be <b>measured in every new scene</b>. The low-level layer holds <b>executable skills</b>, programs verified during task solving.</p>
+      </div>
+      <div class="fig2 afig" data-afig="kb"></div>
+      <div class="kb-examples" id="knowledge">
+        <h4>Knowledge base examples</h4>
+        <p class="sub">One stored entry of each type.</p>
+        <div class="kb-entries" id="kb-grid"></div>
+      </div>
+    </div>
+
+    <div class="method-panel" id="m-ground">
+      <div class="two-col">
+        <div class="prose">
+          <h3>Measure first, then plan</h3>
+          <p>A strategy that is right for an object class can still fail when its numbers are copied from another object or guessed from a segmentation mask. Before writing any code, RoboAuto identifies the task-relevant objects, retrieves their entries, and runs a <b>measurement probe</b> that establishes every open quantity from depth point clouds: circle fits for vessels and plates, oriented boxes for cartons, protruding-point fits for handles.</p>
+          <p>When the initial observation is not enough, <b>active viewpoint selection</b> moves the arm to get a more informative camera view. Estimates from the scene camera and the wrist camera must agree within one centimeter. Anything that fails its checks stays <b>unresolved</b> and is handed to search as a question, not a number.</p>
+        </div>
+        <div class="ground-demo" id="ground-demo-method">
+          <div class="gd-img"><img src="assets/img/stove_agentview.webp?v=20261026q" alt="Scene camera view of the plate-on-stove task with measured quantities">
+          <div class="callouts" data-scene="stove"></div></div>
+          <div class="ground-caption">Quantities measured by the probe on scene 110000 of “put the plate on the stove”.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="method-panel" id="m-search">
+      <div class="panel-text">
+        <h3>Stages, an auditor, and experiments</h3>
+        <p>The coder plans the task as <b>stages</b> that each end in a checkable object state. An <b>independent auditor</b> watches failed runs and can overrule a verifier, and when its physical understanding is uncertain, the coder <b>explores actively</b> with a self-designed experiment before changing code.</p>
+      </div>
+      <div class="fig2 afig" data-afig="search"></div>
+    </div>
+
+    <div class="sub-block" id="walkthrough">
+      <h3>Example run: put the plate on the stove</h3>
+      <div class="timeline" id="timeline"></div>
+    </div>
+
+
+  </div>
+</section>
+
+<section class="section section-alt" id="results">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Results</h2>
+      <p class="lead-claim">RoboAuto achieves the highest mean success on the evaluated tasks from every benchmark family, and more than doubles ASPIRE on LIBERO-PRO Long tasks (<b>73.4</b> vs. 30.8) and LIBERO-Plus tasks (<b>90.3</b> vs. 44.7).</p>
+    </div>
+
+    <div class="res-table-wrap">
+      <table class="res-table" id="res-table"></table>
+      <p class="res-cap">Mean final-program success (%) on test seeds; the number of tasks is in parentheses. Pos and Task denote position and task perturbation. A dash marks an unavailable result. The last row is RoboAuto's difference from ASPIRE.</p>
+    </div>
+
+    <div class="res-grid res-3">
+      <div class="card">
+        <div class="card-head"><h3>Component ablation</h3><p>Mean success on five tasks as search and exploration, the hierarchical knowledge base (KB), and scene grounding are added in turn.</p></div>
+        <div class="chart-legend"></div><div class="chart-box"><canvas id="chart-ablation"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Transfer to RoboTwin 2.0</h3><p>New simulator and bimanual embodiment, without and with the hierarchical knowledge base.</p></div>
+        <div class="chart-legend"><span><i style="background:#C7CCD4"></i>No retained knowledge</span><span><i style="background:#3C73C4"></i>Hierarchical knowledge base</span></div><div class="chart-box"><canvas id="chart-robotwin"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Token usage <span class="down" aria-label="lower is better">&darr;</span></h3><p>Geometric-mean total tokens per task over 16 LIBERO-PRO Long and LIBERO-Plus tasks.</p></div>
+        <div class="chart-legend"><span><i style="background:#3C73C4"></i>RoboAuto</span><span><i style="background:#E8713A"></i>ASPIRE</span><span><i style="background:#2E9E6B"></i>CaP-Agent0</span></div><div class="chart-box"><canvas id="chart-tokens"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="more">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>More tasks</h2>
+      <p class="sub">Example tasks from five benchmark families: RoboTwin 2.0, Robosuite, short-horizon LIBERO-PRO (Object, Goal, Spatial), long-horizon LIBERO-PRO Long, and LIBERO-Plus.</p>
+    </div>
+
+    <div class="sub-block first" id="tasks">
+      <div id="task-grid"></div>
+    </div>
+  </div>
+</section>
+
+<div class="modal" id="ex-modal" hidden role="dialog" aria-modal="true" aria-label="Run details">
+  <div class="modal-back" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Close">Esc</button>
+    <div class="modal-body" id="ex-modal-body"></div>
+  </div>
+</div>
+
+<section class="section section-alt" id="bibtex">
+  <div class="wrap">
+    <h2>BibTeX</h2>
+    <div class="bib">
+      <button class="copy" id="copy-bib">Copy</button>
+<pre id="bib-text">@article{roboauto2026,
+  title   = {RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding},
+  author  = {Liu, Buzhao and Ye, Jianing and Yuan, Xiu and Feng, Yangtong and Huang, Chengsong and Dinh, Tyler and Vorobeychik, Yevgeniy and Zhang, Ning and Zhang, Chongjie},
+  journal = {arXiv preprint arXiv:xxxx.xxxxx},
+  year    = {2026}
+}</pre>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 RoboAuto authors. This page contains no analytics or tracking. Videos are recorded rollouts of final programs on held-out scenes.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="js/fig2.js?v=20261026q"></script>
+<script src="js/figanim.js?v=20261026q"></script>
+<script src="js/main.js?v=20261026q"></script>
+</body>
+</html>

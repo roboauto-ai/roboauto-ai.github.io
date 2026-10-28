@@ -1,0 +1,683 @@
+{
+ "summary": {
+  "RoboAuto": {
+   "Object": 98.7,
+   "Goal": 73.7,
+   "Spatial": 94.8,
+   "LIBERO-PRO": 89.1,
+   "Long": 73.4,
+   "LIBERO-Plus": 90.3,
+   "Robosuite": 90.6
+  },
+  "ASPIRE": {
+   "Object": 96.6,
+   "Goal": 63.1,
+   "Spatial": 55.3,
+   "LIBERO-PRO": 71.7,
+   "Long": 30.8,
+   "LIBERO-Plus": 44.7,
+   "Robosuite": 81.0
+  },
+  "CaP-Agent0": {
+   "Object": 20.0,
+   "Goal": 21.2,
+   "Spatial": 12.9,
+   "LIBERO-PRO": 18.0,
+   "Long": 8.6,
+   "LIBERO-Plus": 33.3,
+   "Robosuite": 68.3
+  },
+  "RHO": {
+   "Object": 24.7,
+   "Goal": 53.1,
+   "Spatial": 57.3,
+   "LIBERO-PRO": 45.0,
+   "Long": null,
+   "LIBERO-Plus": null,
+   "Robosuite": 70.0
+  },
+  "pi0.5": {
+   "Object": 9.1,
+   "Goal": 19.9,
+   "Spatial": 10.6,
+   "LIBERO-PRO": 13.2,
+   "Long": 0.4,
+   "LIBERO-Plus": 68.0,
+   "Robosuite": null
+  }
+ },
+ "long": [
+  {
+   "task": "Place(alphabet_soup, basket) + Place(cream_cheese, basket)",
+   "pert": "Pos",
+   "RoboAuto": 100,
+   "ASPIRE": 46,
+   "CaP-Agent0": 40,
+   "pi0.5": 0
+  },
+  {
+   "task": "Put(white_mug, plate_left) + Put(yellow_white_mug, plate_right)",
+   "pert": "Task",
+   "RoboAuto": 100,
+   "ASPIRE": 60,
+   "CaP-Agent0": 12,
+   "pi0.5": 2
+  },
+  {
+   "task": "Put(white_mug, plate) + Put(chocolate_pudding, right_of(plate))",
+   "pert": "Task",
+   "RoboAuto": 94,
+   "ASPIRE": 20,
+   "CaP-Agent0": 10,
+   "pi0.5": 0
+  },
+  {
+   "task": "TurnOn(stove) + Put(moka_pot, stove)",
+   "pert": "Task",
+   "RoboAuto": 92,
+   "ASPIRE": 0,
+   "CaP-Agent0": 8,
+   "pi0.5": 0
+  },
+  {
+   "task": "Put(book, caddy_back)",
+   "pert": "Pos",
+   "RoboAuto": 74,
+   "ASPIRE": 26,
+   "CaP-Agent0": 0,
+   "pi0.5": 0
+  },
+  {
+   "task": "Place(alphabet_soup, basket) + Place(tomato_sauce, basket)",
+   "pert": "Pos",
+   "RoboAuto": 62,
+   "ASPIRE": 10,
+   "CaP-Agent0": 16,
+   "pi0.5": 2
+  },
+  {
+   "task": "Put(white_mug, plate_left) + Put(yellow_white_mug, plate_right)",
+   "pert": "Pos",
+   "RoboAuto": 58,
+   "ASPIRE": 22,
+   "CaP-Agent0": 0,
+   "pi0.5": 0
+  },
+  {
+   "task": "Put(white_mug, plate) + Put(chocolate_pudding, right_of(plate))",
+   "pert": "Pos",
+   "RoboAuto": 66,
+   "ASPIRE": 54,
+   "CaP-Agent0": 0,
+   "pi0.5": 0
+  },
+  {
+   "task": "Put(moka_pot_1, stove) + Put(moka_pot_2, stove)",
+   "pert": "Pos",
+   "RoboAuto": 0,
+   "ASPIRE": 2,
+   "CaP-Agent0": 0,
+   "pi0.5": 0
+  },
+  {
+   "task": "Put(book, caddy_back)",
+   "pert": "Task",
+   "RoboAuto": 88,
+   "ASPIRE": 68,
+   "CaP-Agent0": 0,
+   "pi0.5": 0
+  }
+ ],
+ "plus": [
+  {
+   "task": "Pick(next_to(ramekin), plate)",
+   "pert": "Camera",
+   "RoboAuto": 88,
+   "ASPIRE": 10,
+   "CaP-Agent0": 46,
+   "pi0.5": 10
+  },
+  {
+   "task": "Pick(next_to(ramekin), plate)",
+   "pert": "Layout",
+   "RoboAuto": 94,
+   "ASPIRE": 18,
+   "CaP-Agent0": 60,
+   "pi0.5": 100
+  },
+  {
+   "task": "Put(white_mug, plate) + Put(chocolate_pudding, right_of(plate))",
+   "pert": "Camera",
+   "RoboAuto": 66,
+   "ASPIRE": 28,
+   "CaP-Agent0": 0,
+   "pi0.5": 4
+  },
+  {
+   "task": "Put(white_mug, plate) + Put(chocolate_pudding, right_of(plate))",
+   "pert": "Layout",
+   "RoboAuto": 94,
+   "ASPIRE": 12,
+   "CaP-Agent0": 2,
+   "pi0.5": 94
+  },
+  {
+   "task": "TurnOn(stove)",
+   "pert": "Camera",
+   "RoboAuto": 100,
+   "ASPIRE": 100,
+   "CaP-Agent0": 26,
+   "pi0.5": 100
+  },
+  {
+   "task": "TurnOn(stove)",
+   "pert": "Layout",
+   "RoboAuto": 100,
+   "ASPIRE": 100,
+   "CaP-Agent0": 66,
+   "pi0.5": 100
+  }
+ ],
+ "robosuite": [
+  {
+   "task": "cube_lift",
+   "RoboAuto": 100,
+   "ASPIRE": 97,
+   "CaP-Agent0": 97,
+   "RHO": 98
+  },
+  {
+   "task": "cube_stack",
+   "RoboAuto": 98,
+   "ASPIRE": 99,
+   "CaP-Agent0": 98,
+   "RHO": 98
+  },
+  {
+   "task": "cube_restack",
+   "RoboAuto": 100,
+   "ASPIRE": 100,
+   "CaP-Agent0": 89,
+   "RHO": 54
+  },
+  {
+   "task": "spill_wipe",
+   "RoboAuto": 97,
+   "ASPIRE": 99,
+   "CaP-Agent0": 100,
+   "RHO": 100
+  },
+  {
+   "task": "two_arm_handover",
+   "RoboAuto": 75,
+   "ASPIRE": 92,
+   "CaP-Agent0": 20,
+   "RHO": 86
+  },
+  {
+   "task": "two_arm_lift",
+   "RoboAuto": 90,
+   "ASPIRE": 71,
+   "CaP-Agent0": 74,
+   "RHO": 53
+  },
+  {
+   "task": "nut_assembly",
+   "RoboAuto": 74,
+   "ASPIRE": 9,
+   "CaP-Agent0": 0,
+   "RHO": 1
+  }
+ ],
+ "ablation": [
+  {
+   "suite": "Long",
+   "task": "TurnOn(stove) + Put(moka_pot, stove)",
+   "pert": "Task",
+   "Baseloop": 8,
+   "+Search": 82,
+   "+KB": 84,
+   "RoboAuto": 92
+  },
+  {
+   "suite": "Long",
+   "task": "Put(white_mug, plate) + Put(chocolate_pudding, right_of(plate))",
+   "pert": "Task",
+   "Baseloop": 4,
+   "+Search": 4,
+   "+KB": 78,
+   "RoboAuto": 94
+  },
+  {
+   "suite": "Spatial (LIBERO-Plus)",
+   "task": "Pick(next_to(ramekin), plate)",
+   "pert": "Layout",
+   "Baseloop": 14,
+   "+Search": 10,
+   "+KB": 30,
+   "RoboAuto": 94
+  },
+  {
+   "suite": "Spatial",
+   "task": "Pick(drawer_top(cabinet_wood), plate)",
+   "pert": "Pos",
+   "Baseloop": 0,
+   "+Search": 0,
+   "+KB": 0,
+   "RoboAuto": 78
+  },
+  {
+   "suite": "Goal",
+   "task": "Put(bowl, stove)",
+   "pert": "Task",
+   "Baseloop": 0,
+   "+Search": 0,
+   "+KB": 0,
+   "RoboAuto": 98
+  }
+ ],
+ "robotwin": [
+  [
+   "Stack two bowls",
+   2,
+   88
+  ],
+  [
+   "Open microwave",
+   0,
+   96
+  ],
+  [
+   "Container on plate",
+   40,
+   92
+  ],
+  [
+   "Place empty cup",
+   56,
+   90
+  ]
+ ],
+ "scaling": {
+  "budget": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55
+  ],
+  "curves": {
+   "0% KB": [
+    0.0,
+    0.0,
+    9.2,
+    9.2,
+    9.2,
+    12.4,
+    12.4,
+    7.2,
+    7.2,
+    9.6,
+    9.6,
+    11.6,
+    13.2,
+    10.8,
+    21.2,
+    21.6,
+    20.4,
+    20.4,
+    20.4,
+    19.6,
+    22.0,
+    17.2,
+    14.4,
+    10.4,
+    10.4,
+    7.6,
+    9.6,
+    4.4,
+    5.2,
+    5.2,
+    4.4,
+    1.2,
+    1.2,
+    1.2,
+    1.2,
+    0.0,
+    0.0,
+    15.2,
+    15.2,
+    16.4,
+    16.4,
+    16.4,
+    16.4,
+    16.4,
+    16.8,
+    18.4,
+    18.4,
+    18.4,
+    18.4,
+    18.4,
+    18.8,
+    18.4,
+    18.4,
+    18.4,
+    18.4,
+    19.2
+   ],
+   "50% KB": [
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    18.0,
+    33.6,
+    34.0,
+    34.0,
+    33.2,
+    33.2,
+    16.0,
+    26.8,
+    44.4,
+    54.0,
+    57.2,
+    56.8,
+    56.8,
+    45.2,
+    45.2,
+    45.2,
+    45.2,
+    57.6,
+    57.6,
+    61.2,
+    58.4,
+    59.6,
+    66.8,
+    66.8,
+    66.4,
+    66.4,
+    67.2,
+    67.2,
+    68.4,
+    68.4,
+    68.4,
+    62.4,
+    59.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    63.6,
+    65.2,
+    64.4,
+    65.2,
+    65.2
+   ],
+   "100% KB": [
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    20.0,
+    23.6,
+    29.6,
+    29.6,
+    33.6,
+    33.6,
+    33.2,
+    28.0,
+    36.0,
+    51.2,
+    72.0,
+    72.0,
+    72.0,
+    70.8,
+    86.0,
+    90.0,
+    90.0,
+    90.0,
+    90.0,
+    92.0,
+    88.0,
+    88.0,
+    88.0,
+    88.0,
+    88.0,
+    90.0,
+    90.0,
+    88.8,
+    88.8,
+    86.8,
+    86.8,
+    86.8,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2,
+    91.2
+   ]
+  }
+ },
+ "tokens": [
+  {
+   "bench": "Long",
+   "ours": 15.7,
+   "aspire": 39.08,
+   "cap": 176.2,
+   "s_ours": 100,
+   "s_aspire": 46,
+   "s_cap": 40
+  },
+  {
+   "bench": "Long",
+   "ours": 89.27,
+   "aspire": 2099.0,
+   "cap": 254.8,
+   "s_ours": 100,
+   "s_aspire": 60,
+   "s_cap": 12
+  },
+  {
+   "bench": "Long",
+   "ours": 26.03,
+   "aspire": 162.43,
+   "cap": 276.1,
+   "s_ours": 94,
+   "s_aspire": 20,
+   "s_cap": 10
+  },
+  {
+   "bench": "Long",
+   "ours": 28.49,
+   "aspire": 300.85,
+   "cap": 443.7,
+   "s_ours": 92,
+   "s_aspire": 0,
+   "s_cap": 8
+  },
+  {
+   "bench": "Long",
+   "ours": 34.88,
+   "aspire": 171.08,
+   "cap": 465.3,
+   "s_ours": 74,
+   "s_aspire": 26,
+   "s_cap": 0
+  },
+  {
+   "bench": "Long",
+   "ours": 64.96,
+   "aspire": 95.32,
+   "cap": 369.9,
+   "s_ours": 62,
+   "s_aspire": 10,
+   "s_cap": 16
+  },
+  {
+   "bench": "Long",
+   "ours": 51.94,
+   "aspire": 666.65,
+   "cap": 75.8,
+   "s_ours": 58,
+   "s_aspire": 22,
+   "s_cap": 0
+  },
+  {
+   "bench": "Long",
+   "ours": 61.08,
+   "aspire": 53.19,
+   "cap": 101.69,
+   "s_ours": 66,
+   "s_aspire": 54,
+   "s_cap": 0
+  },
+  {
+   "bench": "Long",
+   "ours": 86.81,
+   "aspire": 239.38,
+   "cap": 91.4,
+   "s_ours": 0,
+   "s_aspire": 2,
+   "s_cap": 0
+  },
+  {
+   "bench": "Long",
+   "ours": 28.2,
+   "aspire": 20.34,
+   "cap": 79.41,
+   "s_ours": 88,
+   "s_aspire": 68,
+   "s_cap": 0
+  },
+  {
+   "bench": "Plus",
+   "ours": 26.2,
+   "aspire": 94.48,
+   "cap": 59.14,
+   "s_ours": 88,
+   "s_aspire": 10,
+   "s_cap": 46
+  },
+  {
+   "bench": "Plus",
+   "ours": 39.92,
+   "aspire": 624.26,
+   "cap": 33.28,
+   "s_ours": 94,
+   "s_aspire": 18,
+   "s_cap": 60
+  },
+  {
+   "bench": "Plus",
+   "ours": 38.5,
+   "aspire": 106.45,
+   "cap": 95.58,
+   "s_ours": 66,
+   "s_aspire": 28,
+   "s_cap": 0
+  },
+  {
+   "bench": "Plus",
+   "ours": 70.24,
+   "aspire": 34.18,
+   "cap": 91.31,
+   "s_ours": 94,
+   "s_aspire": 12,
+   "s_cap": 2
+  },
+  {
+   "bench": "Plus",
+   "ours": 8.64,
+   "aspire": 29.21,
+   "cap": 44.9,
+   "s_ours": 100,
+   "s_aspire": 100,
+   "s_cap": 26
+  },
+  {
+   "bench": "Plus",
+   "ours": 11.8,
+   "aspire": 183.99,
+   "cap": 38.39,
+   "s_ours": 100,
+   "s_aspire": 100,
+   "s_cap": 66
+  }
+ ]
+}
